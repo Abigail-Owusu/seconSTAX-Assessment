@@ -5,6 +5,17 @@ menuToggle.addEventListener("click", function () {
     menu.classList.toggle("active");
 });
 
+const userIcon = document.getElementById('user-icon');
+const logoutButton = document.getElementById('logout-button');
+
+userIcon.addEventListener('click', function () {
+    logoutButton.classList.toggle('hidden');
+});
+
+logoutButton.addEventListener('click', function () {
+    // Perform logout functionality here
+});
+
 // historical data for the last five days
 //dollars
 const days = ['Day 1', 'Day 2', 'Day 3', 'Day 4', 'Day 5'];
@@ -15,6 +26,7 @@ new Chart("dollarRates", {
     data: {
         labels: days,
         datasets: [{
+
             label: "Dollar Rates",
             fill: false,
             lineTension: 0,

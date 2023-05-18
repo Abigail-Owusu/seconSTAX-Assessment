@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "Times New Roman", sans-serif;
 
 }
 
@@ -125,6 +126,28 @@ header .right .btn_style {
 
 }
 
+.hidden {
+    display: none;
+
+}
+
+.logout-button {
+    padding: 2% 3% 2% 3%;
+    height: 40px;
+    margin-right: 50px;
+    color: #2977B7;
+    border-radius: 5px;
+    border: 1px solid #2977B7;
+    justify-content: center;
+
+}
+
+#user-icon {
+    display: flex;
+    justify-content: center;
+
+}
+
 #menu {
     display: none;
 
@@ -138,7 +161,6 @@ header .right .btn_style {
 .left-body .nav-side-bar .items {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     gap: 30px;
 }
 
@@ -147,12 +169,12 @@ header .right .btn_style {
     justify-content: end;
 }
 
-.menu-div{
+.menu-div {
     display: flex;
     flex-direction: column;
 }
 
-.menu-div li a{
+.menu-div li a {
     color: black;
     padding-left: 10%;
 }
@@ -162,6 +184,7 @@ h2 {
     font-weight: 400;
     color: #2977B7;
 }
+
 .currency-dropdown {
     height: 2rem;
     width: 15rem;
@@ -169,17 +192,20 @@ h2 {
     border-radius: 5px;
     color: #2977B7;
 }
-.rates{
+
+.rates {
     display: flex;
     gap: 46rem;
-    
+
 }
-.recent-rates{
+
+.recent-rates {
     margin-top: 4%;
     display: flex;
     justify-content: space-between;
-    
+
 }
+
 .his-rates {
     display: flex;
     padding-right: 4%;
@@ -187,13 +213,17 @@ h2 {
     justify-content: space-between;
     gap: 20px;
 }
-.his-usd, .his-gbp, .his-eur{
+
+.his-usd,
+.his-gbp,
+.his-eur {
     width: 380px;
     height: 200px;
     padding: 0.5rem;
     background-color: #EDEDED;
 }
-.all-requests{
+
+.all-requests {
     display: flex;
     justify-content: space-between;
     padding-right: 5%;
@@ -206,8 +236,6 @@ h2 {
 
 #transaction-table {
     font-family: Poppins;
-    /* font-weight: 600; */
-    /* font-size: 23px; */
     border-collapse: collapse;
     width: 100%;
     color: #4A4747;
@@ -239,7 +267,8 @@ h2 {
     background-color: #2977B7;
     color: white;
 }
-.transactions{
+
+.transactions {
     margin-top: 3%;
     margin-right: 4%;
 }
