@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">
+                <a><img class="logo_style" src="images/logo.png" alt=""></a>
+                <div class="navbar">
+                    <a href="">Equity</a>
+                    <a href="">Fixed Income</a>
+                    <a href="">My Accounts</a>
+                    <a href="">Newsroom</a>
+                    <a href="">Research</a>
+                    <a href="">Market Data</a>
+                    <a href="">Analytics</a>
+                    <a href="">Liquidity</a>
+                </div>
+            </div>
+            <div class="right">
+                <button class="btn_style" name="Request LP">Request LP</button>
+                <div class="icons">
+                    <i class="fa-solid fa-circle-exclamation fa-xl" style="color: #2977B7;"></i>
+                    <i class="fa-solid fa-bell fa-xl" style="color: #2977B7;"></i>
+                    <i class="fa-solid fa-user fa-xl" style="color: #2977B7;"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <hr class="rule">
+    <div class="left-body">
+        <div class="nav-side-bar">
+            <div class="items">
+
+                <a href=""> Dashboard </a>
+                <a href=""> Reports </a>
+                <a href=""> LP Trading </a>
+                <a href=""> Trading History</a>
+            </div>
+            <div class="menu-div">
+                <a id="menu-toggle"> Code Maintenance</a>
+                <ul id="menu">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="right-body">
+        <div class="rates">
+            <h2> Exchange Rates </h2>
+            <div>
+                <select name="currency" class="currency-dropdown">
+                    <option value="">Ghanaian Cedi</option>
+                    <option value="">Nigerian Naira</option>
+                    <option value="">Kenyan Shilling</option>
+                    <option value="">South African Rand</option>
+                </select>
+            </div>
+        </div>
+        <div class="his-rates">
+            <div class="his-usd">
+                <canvas id="dollarRates"></canvas>
+            </div>
+            <div class="his-gbp">
+                <canvas id="poundRates"></canvas>
+            </div>
+            <div class="his-eur">
+                <canvas id="euroRates"></canvas>
+            </div>
+
+        </div>
+        <div class="recent-rates">
+            <h2> Recent Requests </h2>
+            <div>
+                <button class="all-requests">View all Requests</button>
+            </div>
+        </div>
+        <div class="transactions">
+            <table id="transaction-table">
+                <tr>
+                    <th>
+                        Provider
+                    </th>
+                    <th>
+                        Broker
+                    </th>
+                    <th>
+                        Client ID
+                    </th>
+                    <th>
+                        Transaction Amount
+                    </th>
+                    <th>
+                        Transaction ID
+                    </th>
+                    <th>
+                        Status
+                    </th>
+                    <th>
+                        Date
+                    </th>
+                </tr>
+                <tr>
+                    <td>ABC Company</td>
+                    <td>XYZ Broker</td>
+                    <td>123456 </td>
+                    <td>$500.00</td>
+                    <td>789012</td>
+                    <td>Success</td>
+                    <td>2023-05-10</td>
+
+                </tr>
+                <tr>
+                    <td>DEF Company</td>
+                    <td>PQR Broker</td>
+                    <td>987654</td>
+                    <td>$250.00</td>
+                    <td>345678</td>
+                    <td>Pending</td>
+                    <td>2023-05-11</td>
+
+                </tr>
+                <tr>
+                    <td>GHI Company</td>
+                    <td>LMN Broker</td>
+                    <td>246810</td>
+                    <td>$1000.00</td>
+                    <td>901234</td>
+                    <td>Success</td>
+                    <td>2023-05-12</td>
+
+                </tr>
+                <tr>
+                    <td>JKL Company</td>
+                    <td>STU Broker</td>
+                    <td>135792</td>
+                    <td>$750.00</td>
+                    <td>567890</td>
+                    <td>Success</td>
+                    <td>2023-05-13</td>
+
+                </tr>
+                <tr>
+                    <td>MNO Company</td>
+                    <td>ALU Broker</td>
+                    <td>135793</td>
+                    <td>$700.00</td>
+                    <td>567895</td>
+                    <td>Failed</td>
+                    <td>2023-05-15</td>
+
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

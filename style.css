@@ -1,0 +1,245 @@
+/* removing default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+/* setting the default size of the page */
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+
+header {
+    /* Use flexbox layout to align child elements horizontally */
+    display: flex;
+    align-items: center;
+    /* Fix the position of the header on the viewport */
+    position: fixed;
+    width: 100%;
+    /* Set a high stacking order to ensure the header appears above other elements */
+    z-index: 999999;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+    background-color: #EDEDED;
+}
+
+header .left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header .left img {
+    width: 50px;
+    height: 50px;
+}
+
+header .left .navbar a {
+    color: #2977B7;
+}
+
+header .left .navbar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header .right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header .right .icons {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+header .right .btn_style {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #2977B7;
+    border: none;
+    cursor: pointer;
+}
+
+
+.rule {
+    width: 100%;
+    height: 2px;
+    color: #FFFFFF;
+    border: none;
+}
+
+.left-body {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    background-color: #EDEDED;
+    position: fixed;
+}
+
+.right-body {
+    height: 100%;
+    width: 80%;
+    /* display: flex; */
+    background-color: #FFFFFF;
+    padding-left: 22%;
+    padding-top: 95px;
+
+}
+
+.nav-side-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap: 30px; */
+    /* padding-left: 28px; */
+    padding: 100px 28px 50px 28px;
+}
+
+.nav-side-bar a {
+    color: #2977B7;
+
+}
+
+#menu {
+    display: none;
+
+}
+
+#menu.active {
+    display: block;
+    list-style: none;
+}
+
+.left-body .nav-side-bar .items {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 30px;
+}
+
+.menu-toggle {
+    display: flex;
+    justify-content: end;
+}
+
+.menu-div{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-div li a{
+    color: black;
+    padding-left: 10%;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #2977B7;
+}
+.currency-dropdown {
+    height: 2rem;
+    width: 15rem;
+    border: 2px solid #EDEDED;
+    border-radius: 5px;
+    color: #2977B7;
+}
+.rates{
+    display: flex;
+    gap: 46rem;
+    
+}
+.recent-rates{
+    margin-top: 4%;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.his-rates {
+    display: flex;
+    padding-right: 4%;
+    padding-top: 2%;
+    justify-content: space-between;
+    gap: 20px;
+}
+.his-usd, .his-gbp, .his-eur{
+    width: 380px;
+    height: 200px;
+    padding: 0.5rem;
+    background-color: #EDEDED;
+}
+.all-requests{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5%;
+    padding-top: 2%;
+    margin-right: 50px;
+    color: #2977B7;
+    border-radius: 5px;
+    border: 1px solid #2977B7;
+}
+
+#transaction-table {
+    font-family: Poppins;
+    /* font-weight: 600; */
+    /* font-size: 23px; */
+    border-collapse: collapse;
+    width: 100%;
+    color: #4A4747;
+}
+
+#transaction-table td,
+#transaction-table th {
+    border: 1px solid #2977B7;
+    padding: 8px;
+}
+
+#transaction-table tr:nth-child(even) {
+    background-color: #D1D9D3;
+}
+
+#transaction-table tr:nth-child(odd) {
+    background-color: white;
+}
+
+
+#transaction-table tr:hover {
+    background-color: #ddd;
+}
+
+#transaction-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #2977B7;
+    color: white;
+}
+.transactions{
+    margin-top: 3%;
+    margin-right: 4%;
+}
