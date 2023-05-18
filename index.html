@@ -15,7 +15,9 @@
 
 <body>
     <header>
+        <!-- navbar -->
         <nav>
+            <!-- left of the navbar -->
             <div class="left">
                 <a><img class="logo_style" src="images/logo.png" alt=""></a>
                 <div class="navbar">
@@ -29,18 +31,27 @@
                     <a href="">Liquidity</a>
                 </div>
             </div>
+            <!-- right of the navbar -->
             <div class="right">
                 <button class="btn_style" name="Request LP">Request LP</button>
                 <div class="icons">
                     <i class="fa-solid fa-circle-exclamation fa-xl" style="color: #2977B7;"></i>
                     <i class="fa-solid fa-bell fa-xl" style="color: #2977B7;"></i>
-                    <i id="user-icon" class="fa-solid fa-user fa-xl" style="color: #2977B7;"></i>
-                    <button id="logout-button" class="hidden logout-button">Logout</button>
+                    
+                    <div class="user-dropdown">
+                        <button class="user-button" id="user-button">JD</button>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <a href="#">Logout</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
+
     <hr class="rule">
+
+    <!-- left side of the body -->
     <div class="left-body">
         <div class="nav-side-bar">
             <div class="items">
@@ -60,6 +71,8 @@
         </div>
 
     </div>
+
+    <!-- right side of the body -->
     <div class="right-body">
         <div class="rates">
             <h2> Exchange Rates </h2>
@@ -90,6 +103,8 @@
                 <button class="all-requests">View all Requests</button>
             </div>
         </div>
+
+        <!-- table for tansactions made -->
         <div class="transactions">
             <table id="transaction-table">
                 <tr>

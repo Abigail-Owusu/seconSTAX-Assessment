@@ -5,15 +5,21 @@ menuToggle.addEventListener("click", function () {
     menu.classList.toggle("active");
 });
 
-const userIcon = document.getElementById('user-icon');
-const logoutButton = document.getElementById('logout-button');
+//user dropdown
+const userButton = document.getElementById('user-button');
+const dropdownContent = document.getElementById('dropdown-content');
 
-userIcon.addEventListener('click', function () {
-    logoutButton.classList.toggle('hidden');
+//show logout button when user clicks on user icon
+userButton.addEventListener('click', function () {
+    dropdownContent.classList.toggle('show');
 });
 
-logoutButton.addEventListener('click', function () {
-    // Perform logout functionality here
+window.addEventListener('click', function (event) {
+    if (!event.target.matches('.user-button')) {
+        if (dropdownContent.classList.contains('show')) {
+            dropdownContent.classList.remove('show');
+        }
+    }
 });
 
 // historical data for the last five days
